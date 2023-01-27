@@ -1,19 +1,24 @@
+/*
+  Using code of Jason Randolph
+ */
+
 #ifndef NODE_H
 #define NODE_H
+
 #include <iostream>
 #include "student.h"
 using namespace std;
 
-class Node{
+class Node {
  public:
-  Node(Student *newStudent);
+  Node(Student*);
   ~Node();
-  void setStudent(Student *newStudent);
-  char* getStudent();
-  void setNext(Node* newnext);
+  void setNext(Node* nextNode);
   Node* getNext();
+  Student* getStudent();
  private:
-  Student* value;
+  Student* student;
   Node* next;
 };
+
 #endif
